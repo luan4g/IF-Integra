@@ -1,19 +1,18 @@
 {
   "expo": {
-    "name": "mobile3",
-    "slug": "mobile3",
+    "name": "IF Integra",
+    "slug": "if-integra",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#2D9D40",
+      "resizeMode": "cover",
+      "image": "./assets/splash.png"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +21,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.mecaodin.ifintegra",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.mecaodin.ifintegra",
+      "versionCode": 1
     }
   }
 }

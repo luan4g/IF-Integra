@@ -1,19 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { useFonts } from "@use-expo/font";
+import { AppLoading } from "expo";
+
+import Routes from "./src/routes";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
+  let [fontsLoaded] = useFonts({
+    Angelina: require("./assets/fonts/Angelina.ttf"),
+    "Cherishing-Moments": require("./assets/fonts/Cherishing.ttf"),
+    "The-Blacklist": require("./assets/fonts/Blacklist.ttf"),
+    Daylove: require("./assets/fonts/Daylove.ttf"),
+  });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  if (!fontsLoaded) {
+    <AppLoading />;
+  }
+
+  return <Routes />;
+}
