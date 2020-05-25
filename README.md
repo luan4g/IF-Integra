@@ -1,11 +1,11 @@
 # **IF Integra**
 
-![](https://img.shields.io/github/license/luan4g/IF-Integra?style=for-the-badge)
-![](https://img.shields.io/github/stars/luan4g/IF-Integra?color=black&style=for-the-badge)
-
 ![](https://img.shields.io/badge/platform-android-brightgreen&?style=plastic&logo=android)
 ![](https://img.shields.io/badge/platform-iOS-brightgreen&?style=plastic&logo=apple&logoColor=white)
 ![](https://img.shields.io/github/last-commit/luan4g/IF-Integra)
+
+![](https://img.shields.io/github/license/luan4g/IF-Integra?style=for-the-badge)
+![](https://img.shields.io/github/stars/luan4g/IF-Integra?color=black&style=for-the-badge)
 
 ## **Descrição**
 
