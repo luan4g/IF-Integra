@@ -10,9 +10,11 @@ import {
 } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 
+import { dataNot } from "../data/notifications";
+
 const { height } = Dimensions.get("window");
 
-function Modal({ show, close }) {
+function Modal({ show, close, id }) {
   const [state, setState] = useState({
     opacity: new Animated.Value(0),
     container: new Animated.Value(height),
@@ -29,6 +31,8 @@ function Modal({ show, close }) {
         useNativeDriver: true,
       }),
     ]).start();
+
+    console.log(dataNot);
   }
 
   function CloseModal() {
@@ -74,10 +78,14 @@ function Modal({ show, close }) {
         </View>
         <View style={styles.popInfo}>
           <Image
-            source={require("../../assets/userIcon.png")}
             style={styles.popIcon}
+            source={dataNot.map((item) =>
+              item.notId === id ? item.notIcon : ""
+            )}
           />
-          <Text style={styles.popName}>CAEE</Text>
+          <Text style={styles.popName}>
+            {dataNot.map((item) => (item.notId === id ? item.notName : ""))}
+          </Text>
           <TouchableOpacity style={styles.buttonIcon} onPress={close}>
             <Entypo name="resize-100-" size={19} color="#000" />
           </TouchableOpacity>
@@ -85,10 +93,7 @@ function Modal({ show, close }) {
         <View style={styles.separator} />
         <View style={styles.popDesc}>
           <Text style={{ textAlign: "center" }}>
-            Atualização do calendário acadêmico acaba de ser lançado na aba de
-            horário academico para que todos possam acessar e verificar tudo que
-            está pré programado para ocorrer neste ano de 2020, verifiquem assim
-            que possível, para uma possível dúvida.
+            {dataNot.map((item) => (item.notId === id ? item.notDesc : ""))}
           </Text>
         </View>
       </Animated.View>

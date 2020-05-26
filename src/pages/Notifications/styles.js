@@ -1,4 +1,4 @@
-import { StyleSheet, StatusBar } from "react-native";
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -45,6 +45,11 @@ const styles = StyleSheet.create({
   },
   notDesc: {
     color: "#999",
+  },
+  modal: {
+    position: "absolute",
+    height: "100%",
+    width: "100%",
   },
 });
 
